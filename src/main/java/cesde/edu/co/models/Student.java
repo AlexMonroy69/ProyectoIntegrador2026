@@ -1,16 +1,14 @@
 package cesde.edu.co.models;
 
-public class Student extends Person {
-
+public class Student extends Persons {
     private String birthDate;
 
     public Student() {
         super();
     }
 
-    public Student(Long userId, String code, String documentNumber, String firstName, String lastName, String email, Boolean status, String birthDate) {
-        super(userId, code, documentNumber, firstName, lastName, email, status);
-        this.birthDate = birthDate;
+    public Student(Long userId, String code, String documentNumber, String firstName, String lastName) {
+        super(userId, code, documentNumber, firstName, lastName);
     }
 
     public String getBirthDate() {
@@ -23,8 +21,10 @@ public class Student extends Person {
 
     @Override
     public String toString() {
-        return "Student{} " + super.toString() +
-        "birthDate='" + birthDate + '\'' +
+        return "Student{" +
+                "firstName='" + getFirstName() + '\'' +
+                ", lastName='" + getLastName() + '\'' +
+                ", birthDate='" + birthDate + '\'' +
                 '}';
     }
 }
