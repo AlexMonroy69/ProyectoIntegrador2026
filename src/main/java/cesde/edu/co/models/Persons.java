@@ -1,15 +1,19 @@
 package cesde.edu.co.models;
 
 public class Persons {
-Long userId;
-    String code;
-    String documentNumber;
-    String firtsName;
-    String lastName;
-    Boolean status;
 
-    public Persons() {
-    }
+System.out.println("Hello  world");
+}
+
+Long userId;
+String code;
+String documentNumber;
+String firtsName;
+String lastName;
+Boolean status;
+
+public Persons() {
+}
 }
 
 public Long getUserId() {
@@ -58,4 +62,16 @@ public Boolean getStatus() {
 
 public void setStatus(Boolean status) {
     this.status = status;
+}
+
+@Override
+public String toString() {
+    return "Persons{" +
+            "userId=" + userId +
+            ", code='" + code + '\'' +
+            ", documentNumber='" + documentNumber + '\'' +
+            ", firtsName='" + firtsName + '\'' +
+            ", lastName='" + lastName + '\'' +
+            ", status=" + status +
+            '}';
 }
