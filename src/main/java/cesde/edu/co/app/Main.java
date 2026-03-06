@@ -1,8 +1,12 @@
 package cesde.edu.co.app;
 
-import cesde.edu.co.models.Persons; // Asegúrate de que el archivo se llame Persons.java
+import cesde.edu.co.models.Persons;
 import cesde.edu.co.models.Teacher;
 import cesde.edu.co.models.Student;
+import cesde.edu.co.models.Programs;
+import cesde.edu.co.models.Subjects;
+import cesde.edu.co.models.Groups;
+import cesde.edu.co.models.Grades;
 
 public class Main {
     public static void main(String[] args) {
@@ -38,5 +42,32 @@ public class Main {
 
         Teacher teacher2 = new Teacher(3L, "003", "456789123", "Juan", "Lopez");
         System.out.println(teacher2.toString());
+
+        Programs program = new Programs();
+        program.setId(1L);
+        program.setCodigo("SOFT-01");
+        program.setNombre("Desarrollo de Software");
+        System.out.println(program.toString());
+
+        Subjects subject = new Subjects();
+        subject.setId(1L);
+        subject.setNombre("Bases de Datos I");
+        subject.setCreditos(4);
+        subject.setPrograma(program);
+        System.out.println(subject.toString());
+
+        Groups group = new Groups();
+        group.setId(1L);
+        group.setCodigo("G1-SOFT-M");
+        group.setPrograma(program);
+        group.setShift("mañana");
+        System.out.println(group.toString());
+
+        Grades grade = new Grades();
+        grade.setId(1L);
+        grade.setFinalScore(4.8);
+        grade.setObservacion("Excelente desempeño");
+        grade.setEstudiante(student2);
+        System.out.println(grade.toString());
     }
 }
