@@ -11,11 +11,13 @@ public class Teacher extends Persons {
         super(userId, code, documentNumber, firstName, lastName);
     }
 
-    public String getProfession() { return profession; }
-    public void setProfession(String profession) { this.profession = profession; }
+    // --- SETTERS Y GETTERS ---
 
-    @Override
-    public String toString() {
-        return "Teacher{" + "firstName=" + getFirstName() + ", profession='" + profession + '\'' + '}';
+    public String getProfession() {
+        return profession;
+    }
+
+    public void setProfession(String profession) {
+        this.profession = profession;
     }
 }

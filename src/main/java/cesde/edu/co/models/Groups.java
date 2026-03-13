@@ -1,24 +1,52 @@
 package cesde.edu.co.models;
 
-import jakarta.persistence.*;
-import lombok.Data;
-
-@Entity
-@Table(name = "grupos")
-@Data
 public class Groups {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "grupo_id")
     private Long id;
-
-    @Column(unique = true, nullable = false)
     private String codigo;
-
-    @ManyToOne
-    @JoinColumn(name = "programa_id")
     private Programs programa;
+    private String shift;
 
-    @Column(name = "jornada")
-    private String shift; // mañana, tarde o noche
+    public Groups() {
+    }
+
+    public Groups(Long id, String codigo, Programs programa, String shift) {
+        this.id = id;
+        this.codigo = codigo;
+        this.programa = programa;
+        this.shift = shift;
+    }
+
+    // --- SETTERS Y GETTERS ---
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
+    }
+
+    public Programs getPrograma() {
+        return programa;
+    }
+
+    public void setPrograma(Programs programa) {
+        this.programa = programa;
+    }
+
+    public String getShift() {
+        return shift;
+    }
+
+    public void setShift(String shift) {
+        this.shift = shift;
+    }
 }

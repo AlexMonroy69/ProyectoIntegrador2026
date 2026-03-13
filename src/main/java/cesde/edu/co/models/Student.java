@@ -1,6 +1,5 @@
 package cesde.edu.co.models;
 
-
 public class Student extends Persons {
     private String birthDate;
 
@@ -12,20 +11,13 @@ public class Student extends Persons {
         super(userId, code, documentNumber, firstName, lastName);
     }
 
+    // --- SETTERS Y GETTERS ---
+
     public String getBirthDate() {
         return birthDate;
     }
 
     public void setBirthDate(String birthDate) {
         this.birthDate = birthDate;
-    }
-
-    @Override
-    public String toString() {
-        return "Student{" +
-                "firstName='" + getFirstName() + '\'' +
-                ", lastName='" + getLastName() + '\'' +
-                ", birthDate='" + birthDate + '\'' +
-                '}';
     }
 }
