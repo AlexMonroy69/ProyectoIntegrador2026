@@ -1,18 +1,18 @@
 package cesde.edu.co.models;
 
-public class Persons {
-    private Long userId;
-    private String code;
-    private String documentNumber;
-    private String firstName;
-    private String lastName;
-    private String email;
-    private Boolean status;
+public abstract class Persons {
+    protected Long userId;
+    protected String code;
+    protected String documentNumber;
+    protected String firstName;
+    protected String lastName;
+    protected String email;
+    protected Boolean status;
 
-    public Persons() {
+    protected Person() {
     }
 
-    public Persons(Long userId, String code, String documentNumber, String firstName, String lastName, String email, Boolean status) {
+    protected Person(Long userId, String code, String documentNumber, String firstName, String lastName, String email, Boolean status) {
         this.userId = userId;
         this.code = code;
         this.documentNumber = documentNumber;
@@ -22,38 +22,68 @@ public class Persons {
         this.status = status;
     }
 
-    public Persons(Long userId, String code, String documentNumber, String firstName, String lastName) {
+    @Override
+    public abstract String getRole();
+    return "";
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public String getDocumentNumber() {
+        return documentNumber;
+    }
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public Boolean getStatus() {
+        return status;
+    }
+
+    public void setUserId(Long userId) {
         this.userId = userId;
+    }
+
+    public void setCode(String code) {
         this.code = code;
+    }
+
+    public void setDocumentNumber(String documentNumber) {
         this.documentNumber = documentNumber;
+    }
+
+    public void setFirstName(String firstName) {
         this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
-    public Long getUserId() { return userId; }
-    public void setUserId(Long userId) { this.userId = userId; }
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
-    public String getCode() { return code; }
-    public void setCode(String code) { this.code = code; }
-
-    public String getDocumentNumber() { return documentNumber; }
-    public void setDocumentNumber(String documentNumber) { this.documentNumber = documentNumber; }
-
-    public String getFirstName() { return firstName; }
-    public void setFirstName(String firstName) { this.firstName = firstName; }
-
-    public String getLastName() { return lastName; }
-    public void setLastName(String lastName) { this.lastName = lastName; }
-
-    public String getEmail() { return email; }
-    public void setEmail(String email) { this.email = email; }
-
-    public Boolean getStatus() { return status; }
-    public void setStatus(Boolean status) { this.status = status; }
+    public void setStatus(Boolean status) {
+        this.status = status;
+    }
 
     @Override
     public String toString() {
-        return "Persons{" +
+        return "Person{" +
                 "userId=" + userId +
                 ", code='" + code + '\'' +
                 ", documentNumber='" + documentNumber + '\'' +

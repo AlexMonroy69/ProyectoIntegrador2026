@@ -1,21 +1,33 @@
 package cesde.edu.co.models;
 
-public class Teacher extends Persons {
-    private String profession;
+public class Student extends Persons {
 
-    public Teacher() {
+    private long studenId;
+    protected String birthDate;
+
+    public Student() {
         super();
+        this.studenId = null;
+        this.birthDate = null;
     }
 
-    public Teacher(Long userId, String code, String documentNumber, String firstName, String lastName) {
-        super(userId, code, documentNumber, firstName, lastName);
+    public Student(Long userId, String code, String documentNumber, String firstName, String lastName, String email, Boolean status, String birthDate) {
+        super(userId, code, documentNumber, firstName, lastName, email, status);
+        this.birthDate = birthDate;
     }
 
-    public String getProfession() { return profession; }
-    public void setProfession(String profession) { this.profession = profession; }
+    public String getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(String birthDate) {
+        this.birthDate = birthDate;
+    }
 
     @Override
     public String toString() {
-        return "Teacher{" + "firstName=" + getFirstName() + ", profession='" + profession + '\'' + '}';
+        return "Student = " return "studentId" + super.toString() +
+                "birthDate='" + birthDate + '\'';
+
     }
 }

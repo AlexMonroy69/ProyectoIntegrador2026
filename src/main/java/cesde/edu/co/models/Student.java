@@ -5,6 +5,8 @@ public class Student extends Persons {
 
     public Student() {
         super();
+        this.studentId = null;
+        this.birthDate = null;
     }
 
     public Student(Long userId, String code, String documentNumber, String firstName, String lastName) {
