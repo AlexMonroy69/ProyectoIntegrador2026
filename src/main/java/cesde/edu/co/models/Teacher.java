@@ -11,7 +11,7 @@ public class Student extends Persons {
         this.birthDate = null;
     }
 
-    public Student(Long teacherId,Long userId, String code, String documentNumber, String firstName, String lastName, String email, Boolean status, String birthDate) {
+    public Student(Long teacherIdd,Long userId, String code, String documentNumber, String firstName, String lastName, String email, Boolean status, String birthDate) {
         super(userId, code, documentNumber, firstName, lastName, email, status);
         this.birthDate = birthDate;
     }
