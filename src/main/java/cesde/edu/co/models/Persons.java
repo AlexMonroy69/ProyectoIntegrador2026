@@ -9,10 +9,10 @@ public abstract class Persons {
     protected String email;
     protected Boolean status;
 
-    protected Person() {
+    protected Persons() {
     }
 
-    protected Person(Long userId, String code, String documentNumber, String firstName, String lastName, String email, Boolean status) {
+    protected Persons(Long userId, String code, String documentNumber, String firstName, String lastName, String email, Boolean status) {
         this.userId = userId;
         this.code = code;
         this.documentNumber = documentNumber;
@@ -22,59 +22,58 @@ public abstract class Persons {
         this.status = status;
     }
 
-    @Override
     public abstract String getRole();
-    return "";
 
     public Long getUserId() {
         return userId;
-    }
-
-    public String getCode() {
-        return code;
-    }
-
-    public String getDocumentNumber() {
-        return documentNumber;
-    }
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public Boolean getStatus() {
-        return status;
     }
 
     public void setUserId(Long userId) {
         this.userId = userId;
     }
 
+    public String getCode() {
+        return code;
+    }
+
     public void setCode(String code) {
         this.code = code;
+    }
+
+    public String getDocumentNumber() {
+        return documentNumber;
     }
 
     public void setDocumentNumber(String documentNumber) {
         this.documentNumber = documentNumber;
     }
 
+    public String getFirstName() {
+        return firstName;
+    }
+
     public void setFirstName(String firstName) {
         this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
     }
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public Boolean getStatus() {
+        return status;
     }
 
     public void setStatus(Boolean status) {
@@ -83,7 +82,7 @@ public abstract class Persons {
 
     @Override
     public String toString() {
-        return "Person{" +
+        return "Persons{" +
                 "userId=" + userId +
                 ", code='" + code + '\'' +
                 ", documentNumber='" + documentNumber + '\'' +
